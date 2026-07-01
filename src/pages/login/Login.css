@@ -1,0 +1,77 @@
+/* Tela inteira com form centralizado */
+.page-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Card do formulário */
+.login-card {
+  width: 350px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* LABEL */
+.login-label {
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #444;
+  display: block;
+}
+
+/* Input */
+.login-input {
+  width: 85%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.login-input:focus {
+  border-color: #409cff;
+  box-shadow: 0 0 4px rgba(50, 140, 255, 0.4);
+}
+
+/* Botão */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.login-button:hover {
+  background: #005fcc;
+}
+
+/* Erro */
+.error-message {
+  margin-top: 10px;
+  color: red;
+  text-align: center;
+}

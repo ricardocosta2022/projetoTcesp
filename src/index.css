@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Light */
+body.light {
+  --bg: #ffffff;
+  --text: #000000;
+  --panel: #f0f0f0;
+}
+
+/* Dark */
+body.dark {
+  --bg: #121212;
+  --text: #ffffff;
+  --panel: #1f1f1f;
+}
+
+.layout {
+  display: flex;
+  height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.sidebar {
+  width: 230px;
+  background: var(--panel);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.side-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.topbar {
+  background: var(--panel);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: var(--panel);
+  padding: 40px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela th,
+.tabela td {
+  border: 1px solid #777;
+  padding: 10px;
+}
