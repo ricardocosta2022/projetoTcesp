@@ -2,7 +2,7 @@ import "./DesabilitarProtocolo.css";
 import { useDesabilitarProtocolo } from "./useDesabilitarProtocolo";  
 import React from "react";
 import axios from "axios";
-import { CarregarUnidadeProtocoladora, CarregamentoGridInicial } from "../../controller/UnidadeProtocoladoraController";
+import { CarregarUnidadeProtocoladora } from "../../controller/UnidadeProtocoladoraController";
 
 // COMPONENTE PRINCIPAL
 export default function Desabilitar() {
@@ -14,10 +14,8 @@ export default function Desabilitar() {
     servidoresPaginados,
     unidadesProtocoladoras,
     message,
-    CarregamentoGridInicial,
     limpar,
     buscarPorNomeOuCodigo,
-    buscarTodosServidorPorNomeLoginOuCodigo,
 
     // PAGINAÇÃO
     paginaAtual,
@@ -75,10 +73,11 @@ export default function Desabilitar() {
           </div>
 
           <div className="btn-box">
+
             <button
+              type="button"
               className="btn-primary-custom"
-              onClick={buscarPorNomeOuCodigo}
-            >
+              onClick={buscarPorNomeOuCodigo}>
               Buscar
             </button>
 

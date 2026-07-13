@@ -3,7 +3,7 @@ import axios from "axios";
 export async function CarregarUnidadeProtocoladora() {
   try {
 
-    const response = await axios.get("http://localhost:8080/api/delegacia/listarCodEDescricao");
+    const response = await axios.get("http://localhost:8080/api/delegacia/listarCodEDescricaoUnidadeProtocoladora");
 
     return response.data;
 
@@ -31,15 +31,18 @@ export async function CarregamentoGridInicial(codDelegacia = null, loginNome = n
 }
 
 
-export async function buscarTodosServidorPorNomeLoginOuCodigo(nomeLogin, codigo) {
+export async function buscarTodosServidorPorNomeLoginOuCodigo(loginNome, codigo) {
+console.log("Parâmetros recebidos - loginNome:", loginNome, "codigo:", codigo);
+
   try {
 
     const response = await axios.get("http://localhost:8080/api/delegacia/servidores",
       {
         params: {
-          loginOuNome: nomeLogin === "" ? null : nomeLogin,
+          loginNome: loginNome === "" ? null : loginNome,
           codDelegacia: codigo === "" ? null : codigo
         }
+
       }
     );
 

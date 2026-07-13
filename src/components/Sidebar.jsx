@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { FaHome, FaTable, FaMoon, FaSun, FaUser } from "react-icons/fa";
+import { FaHome, FaTable, FaMoon, FaSun, FaUser, FaBookReader } from "react-icons/fa";
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
+import { FaJava } from "react-icons/fa6";
 
 export default function Sidebar() {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -17,6 +18,10 @@ export default function Sidebar() {
 
         <Link to="/cadastrar" className="side-link">
           <FaUser /> Cadastrar Protocolo
+        </Link>
+
+        <Link to="/cadastrarProduto" className="side-link">
+          <FaBookReader /> Cadastrar Produto
         </Link>
 
         <button className="side-link" onClick={toggleTheme}>

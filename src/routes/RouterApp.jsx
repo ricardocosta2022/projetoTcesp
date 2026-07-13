@@ -4,9 +4,9 @@ import { AuthContext } from "../context/AuthContext";
 
 import Login from "../pages/login/Login";
 import Dashboard from "../pages/Dashboard";
-import Tabela from "../pages/Tabela";
 import Desabilitar from "../pages/desabilitar/DesabilitarProtocolo";
 import CadastrarUsuarioProtocolo from "../pages/cadastrar/CadastrarProtocolo";
+import CadastrarProduto from "../pages/cadastroProduto/CadastrarProduto";
 import Layout from "../components/Layout";
 
 
@@ -31,10 +31,9 @@ export default function RouterApp() {
           }
         >
           <Route index element={<Dashboard />} />
-          <Route path="tabela" element={<Tabela />} />
           <Route path="desabilitar" element={<Desabilitar />} />
           <Route path="cadastrar" element={<CadastrarUsuarioProtocolo />} />
-          
+          <Route path="cadastrarProduto" element={<CadastrarProduto />} />
         </Route>
 
         <Route path="*" element={<Navigate to="/" />} />

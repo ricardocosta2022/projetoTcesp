@@ -81,6 +81,7 @@ const limpar = async () => {
 
 /* Função para buscar por nome ou código */
   const buscarPorNomeOuCodigo = async () => {
+   console.log("Clique detectado!"); 
     try {
       const codigo = codigoUnidadeSelecionada || null;
       // Se o campo de nome estiver vazio, passamos null para a API, 
@@ -100,9 +101,10 @@ const limpar = async () => {
       } else {
         showMessage("success", `${dados.length} registro(s) encontrado(s).`);
       }
-    } catch {
-      showMessage("error", "Não foi possível buscar os servidores.");
-    } 
+      } catch (error) {
+        console.error(error);
+        showMessage("error", "Não foi possível buscar os servidores.");
+      }
   };
 
 
@@ -121,7 +123,6 @@ return {
   message,
 
   buscarPorNomeOuCodigo,
-  buscarTodosServidorPorNomeLoginOuCodigo,
   limpar,
 
   paginaAtual,
